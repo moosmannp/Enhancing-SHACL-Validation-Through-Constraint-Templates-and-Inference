@@ -1,0 +1,97 @@
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix voaf:   <http://purl.org/vocommons/voaf#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix sst:    <TODO> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+
+
+sst:
+    a                             voaf:Vocabulary, owl:Ontology ;
+    rdfs:label                    "GAIA-X Ontology"@en ;
+    dct:contributor               <https://github.com/moosmannp> ;
+    owl:versionInfo               "1.0" ;
+.
+
+
+sst:equivalentClass
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:disjointClass
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:inControlledVocabulary
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:languageTagDefinition
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:languageTagCardinalityEquals
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:languageTagCardinalityMin
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:languageTagCardinalityMax
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:functionalProperty
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:inverseFunctionalProperty
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:symmetricObjectProperty
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:aSymmetricObjectProperty
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:transitiveObjectProperty
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:selfRestriction
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:sumEquals
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:sumMin
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
+
+sst:sumMax
+    a   owl:DatatypeProperty ;
+    rdfs:domain sh:NodeShape ;
+    rdfs:range xsd:string .
