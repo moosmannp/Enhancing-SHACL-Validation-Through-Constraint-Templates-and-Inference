@@ -4,7 +4,7 @@
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix voaf:   <http://purl.org/vocommons/voaf#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix sst:    <TODO> .
+@prefix sst:    <https://raw.githubusercontent.com/moosmannp/Enhancing-SHACL-Validation-Through-Constraint-Templates-and-Inference/main/Constraint%20Templates/sst.ttl> .
 @prefix sh:     <http://www.w3.org/ns/shacl#> .
 
 
