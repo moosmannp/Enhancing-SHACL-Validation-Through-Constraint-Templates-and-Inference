@@ -1,6 +1,7 @@
 import numpy as np
 from rdflib import RDF, BNode, Literal, URIRef, Namespace, Graph, collection
 import networkx as nx
+import sys
 
 
 def getAbbreviations(ontologyGraph, shaclGraph):
@@ -572,9 +573,9 @@ def sstSubPropertyInference(shaclGraph, G, nodeValues, sst, abbreviations):
 
 
 if __name__ == '__main__':
-    ontologyFile = 'ExampleOntology.ttl'
-    shaclFile = 'runningExampleMapped.ttl'
-    output = 'newShacl.ttl'
+    ontologyFile = sys.argv[1]
+    shaclFile = sys.argv[2]
+    output = sys.argv[3]
 
     shaclGraph = Graph()
     shaclGraph.parse(shaclFile, format="turtle")
