@@ -1,12 +1,6 @@
 import sys
 from rdflib import Graph, BNode, Literal, URIRef, Namespace
 
-#sh:property [ sh:path ex:visitsLecture; sst:inControlledVocabulary ex:Lecture ; ] ; -> ISO vocabulary aus gaia-x (https://gitlab.com/gaia-x/gaia-x-community/gaia-x-self-descriptions/-/blob/master/implementation/ontology/ControlledVocabularies/Certifications.ttl)
-
-    #sh:property [ sh:path ex:hasStudentID; sst:sum 1 ; ] ;
-	#sh:property [ sh:path rdfs:type; sst:equivalentClass "ex:Human" ; ] ;
-
-#command sst:classEquivalence must be present for both targetClass shapes
 
 def addQueryNodes(shaclGraph, nodeShape, message, mapping):
     node = BNode()
@@ -63,7 +57,7 @@ def constraint32Mapping(shaclGraph):
         inputs = row.input.split(",")
         property = inputs[0].rstrip().lstrip()
         tag = inputs[1].rstrip().lstrip()
-        message = "Constraints of this type guarantee that individuals of a given class are assigned to the class skos:Concept and are included in at least one of possibly multiple controlled vocabularies."
+        message = "Constraints of this type guarantee that individuals of a given class are assigned to the class skos:Concept and are included in a specific controlled vocabulary."
         mapping = "\n\t\t\tSELECT "+str("$this")+"\n\t\t\tWHERE {\n\t\t\t\t"+str("$this")+" %s ?object .\n\t\t\t\tFILTER (!EXISTS{?object a skos:Concept} || !EXISTS{?object skos:inScheme %s} )\n\t\t\t} \n\t\t\t" % (property, tag)
         addQueryNodes(shaclGraph, row.nodeShape, message, mapping)
 
