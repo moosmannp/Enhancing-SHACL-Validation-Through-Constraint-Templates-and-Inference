@@ -1,12 +1,14 @@
 # Documentation
 This documentation lists all supported commands supported by the SHACL-SPARQL Templates (sst) and short examples on how to use them. Note that a target class has to be defines in the SHACL file via the sh:targetClass command.
 
-The mapping from the sst: commands to SHACL-SPARQL is done via the Mapping.py script. It takes parameters as input
+The mapping from the sst: commands to SHACL-SPARQL is done via the Mapping.py script. It takes two parameters as input
 
 1. Path to the SHACL file containing sst: commands
 2. Output path were the SHACL file containing the SHACL-SPARQL mappings is stored
 
-Command line: python .\Mapping.py /path/to/shaclGraph.ttl path/to/output.ttl
+Command line execution: 
+
+    python .\Mapping.py /path/to/shaclGraph.ttl path/to/output.ttl
 
 ###sst:equivalentClass
 Constraints of the constraint type class equivalence assert that two classes have the same instances.
